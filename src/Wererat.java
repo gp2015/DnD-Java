@@ -1,31 +1,20 @@
-public class Wererat {
+public class Wererat extends Monster {
 	
+	public Wererat() {
+		super("Wererat", 48, 17);
+	}
+
+	public void shortSword() {
+		System.out.println("Wererat uses a shortsword!");
+	}
+/*
+	public String setName() {
+		this.name = this.getClass().getSimpleName();
+	}
+
 	public String getName() {
 		return this.getClass().getSimpleName();
 	}	
-	
-	int AC = 17;
-	int HP = 48;
-	
-	public int getAC() {
-		return this.AC;
-	}
-	
-	public int getHP() {
-		return this.HP;
-	}
-	
-	public int calcHP(int dmg) {
-		HP -= dmg;
-		return this.HP;
-	}
-	
-	public void resetHP() {
-		this.HP = 48;
-	}
-	
-	public void ShortSword(){
-		System.out.println("ShortSworded!");
-	}
-	
+*/
 }
+

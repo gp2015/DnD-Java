@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args){
-		
+
 		// Player naming character
 		PlayerChar player = new PlayerChar();
 		Scanner in = new Scanner(System.in);
@@ -22,8 +22,8 @@ public class Main {
 		Wererat monster2 = new Wererat();
 		String monster2Name = monster2.getName();
 		
-		String combatResult = player.attack(monster2.AC);
-		int monster2dmgTaken = monster2.calcHP(dmg);
+		String combatResult = player.attack(monster2.ac);
+		int monster2dmgTaken = monster2.calcHp(dmg);
 		
 		if (combatResult == ("Hits")) {
 			System.out.println(playerName + " attacks " + monster2Name + " and " + combatResult + "!" + " " + monster2Name + " takes " + dmg + " damage and has " + monster2dmgTaken + " HP remaining!");
@@ -31,7 +31,14 @@ public class Main {
 			System.out.println(playerName + " attacks " + monster2Name + " and " + combatResult + "!");
 		}
 		
-		monster2.resetHP();
+		monster2.resetHp();
 		
+		Wererat wererat1 = new Wererat();
+		printer("Hello, I'm a " + wererat1.getName());
+		//System.out.println(wererat1.getName());
 	}
+	
+        public static void printer(Object obj) {
+        	System.out.println(obj.toString());
+        }
 }
